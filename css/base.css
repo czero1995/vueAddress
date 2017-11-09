@@ -1,0 +1,150 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+p,
+blockquote,
+pre,
+hr,
+figure,
+table,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+
+li {
+  list-style: none;
+}
+
+
+input {
+  outline: none;
+}
+p {
+  margin: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+.addressBox{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5.1rem;
+    z-index: 9;
+    background: #f5f5f5;
+    display: block!important;
+}
+.addressBox ul{
+    width: 33%;
+    height: 5.1rem;
+    background: #E6E6E6;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+.addressBox li{
+	height: 0.62rem;
+	font: normal 0.26rem/0.62rem "微软雅黑";
+	color: #666;
+	text-align: center;
+}
+.cityBox{
+    position: absolute;
+    top: 0;
+    left: 33%;
+    width: 100%;
+    height: 5.1rem;
+    display: none;
+    overflow-y: scroll;
+    z-index: 19;
+    background: #E6E6E6;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+.cityBox ul{
+    width: 100%;
+    height: 5.1rem;
+}
+.cityBox li{
+    padding-left: 0.17rem;
+    text-align: left;
+    border-bottom: 0.01rem solid #e6e6e6;
+}
+.areaBox{
+position: absolute;
+    top: 0;
+    left: 33%;
+    width: 33%;
+    height: 5.1rem;
+    display: none;
+    overflow-y: scroll;
+    z-index: 9999;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*模态框*/
+.model {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+}
+.model-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: .15rem;
+  margin: auto;
+  background-color: #ffffff;
+  text-align: center;
+}
+input{
+	font-size: 0.32rem;
+	width: 100%;
+	text-align: center;
+	margin-top: .3rem;
+	border:1px solid #ccc;
+}
+/*点击省份，出现城市*/
+.addressBox .active{
+	background: #f5f5f5;
+}
+.addressBox .active .cityBox{
+	display: block;
+}
+/*点击城市，出现区域*/
+.cityBox .active{
+	background: #f5f5f5;
+}
+.cityBox .active .areaBox{
+	display: block;
+}
